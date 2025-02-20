@@ -10,8 +10,6 @@ import { SeedService } from './seed/seed.service';
 import * as dotenv from 'dotenv';
 
 dotenv.config(); // Load env
-console.log(process.env.DB_HOST)
-console.log(process.env.DB_PORT)
 @Module({
   imports: [
     TypeOrmModule.forRoot({
