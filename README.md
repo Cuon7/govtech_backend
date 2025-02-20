@@ -64,10 +64,17 @@ Education sytem is a backend service designed to help teachers perform administr
 ### Installation
 To install the project, follow these steps:
 
+1. Clone the repository
 ```bash
 git clone https://github.com/Cuon7/govtech_backend.git
 cd govtech_backend
 ```
+
+2. Install dependencies (Delete yarn.lock if error occurs)
+
+   ```bash
+    yarn install
+   ```
 
 ### Environment setup
 
