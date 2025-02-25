@@ -9,6 +9,7 @@ Education sytem is a backend service designed to help teachers perform administr
 - [Tech stacks](#tech-stacks)
 - [Source structure](#source-structure)
 - [Test coverage](#test-coverage)
+- [Swagger](#swagger)
 - [How to run](#how-to-run)
   - [Pre-requisites](#pre-requisites)
   - [Installation](#installation)
@@ -66,6 +67,10 @@ Education sytem is a backend service designed to help teachers perform administr
 
 ## Test coverage
 ![test-coverage](images/test-coverage.png)
+
+## Swagger
+Swagger API URL: http://localhost:3000/swagger
+![swagger](images/swagger.png)
 
 ## How to run
 ### Pre-requisites

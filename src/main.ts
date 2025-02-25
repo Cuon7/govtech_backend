@@ -9,10 +9,10 @@ async function bootstrap() {
 
   //  Setup swagger
   const config = new DocumentBuilder()
-    .setTitle('Cats example')
-    .setDescription('The cats API description')
+    .setTitle('Education System API')
+    .setDescription('API endpoint for Education System')
     .setVersion('1.0')
-    .addTag('cats')
+    .addTag('EDU_SYS')
     .build();
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('swagger', app, documentFactory);
