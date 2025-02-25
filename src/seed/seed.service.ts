@@ -11,7 +11,7 @@ export class SeedService {
         private readonly teacherRepository: Repository<Teacher>,
         @InjectRepository(Student)
         private readonly studentRepository: Repository<Student>
-    ) {}
+    ) { }
 
     async seed() {
         const teachers = await this.teacherRepository.find();
@@ -19,6 +19,12 @@ export class SeedService {
             const teacher = await this.teacherRepository.create({
                 email: 'firstTeacher@gmail.com',
             })
+
+            await this.teacherRepository.save(teacher);
+
+        }
+        const students = await this.studentRepository.find();
+        if (students.length === 0) {
             const student1 = await this.studentRepository.create({
                 email: '1stStudent@gmail.com'
             })
@@ -28,8 +34,7 @@ export class SeedService {
             const student3 = await this.studentRepository.create({
                 email: '3rdStudent@gmail.com'
             })
-            teacher.students = [student1, student2, student3];
-            await this.teacherRepository.save(teacher);
+            await this.studentRepository.save([student1, student2, student3])
         }
     }
 }
