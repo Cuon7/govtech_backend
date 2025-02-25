@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common"
 import { InjectRepository } from "@nestjs/typeorm";
-import { Student } from "src/entities/student.entity";
-import { Teacher } from "src/entities/teacher.entity";
+import { Student } from "../entities/student.entity";
+import { Teacher } from "../entities/teacher.entity";
 import { Repository } from "typeorm";
 
 @Injectable()
@@ -29,8 +29,7 @@ export class SeedService {
                 email: '3rdStudent@gmail.com'
             })
             teacher.students = [student1, student2, student3];
-            await this.teacherRepository.save(teacher)
-            console.log('Seed data successfully')
+            await this.teacherRepository.save(teacher);
         }
     }
 }

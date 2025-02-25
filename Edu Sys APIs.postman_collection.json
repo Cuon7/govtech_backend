@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "722e343d-e604-4a05-9f2b-27f4bf737a13",
+		"name": "Edu Sys APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17842228"
+	},
+	"item": [
+		{
+			"name": "Register students",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"teacher\": \"firstTeacher@gmail.com\",\r\n    \"students\": [\r\n        \"1stStudent@gmail.com\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'localhost:3000/api/register' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n    \"teacher\": \"firstTeacher@gmail.com\",\r\n    \"students\": [\r\n        \"1stStudent@gmail.com\"\r\n    ]\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Common student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/commonstudents?teacher=firstTeacher%40gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"commonstudents"
+					],
+					"query": [
+						{
+							"key": "teacher",
+							"value": "firstTeacher%40gmail.com"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location 'localhost:3000/api/commonstudents?teacher=firstTeacher%40gmail.com'"
+			},
+			"response": []
+		},
+		{
+			"name": "Suspend student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"student\" : \"1stStudent@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/suspend",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"suspend"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'localhost:3000/api/suspend' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n  \"student\" : \"1stStudent@gmail.com\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Get student from notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\":  \"testemail2@gmail.com\",\r\n  \"notification\": \"Hello students! @3rdStudent@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/retrievefornotifications",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"retrievefornotifications"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'localhost:3000/api/retrievefornotifications' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n  \"teacher\":  \"testemail2@gmail.com\",\r\n  \"notification\": \"Hello students! @3rdStudent@gmail.com\"\r\n}'"
+			},
+			"response": []
+		}
+	]
+}

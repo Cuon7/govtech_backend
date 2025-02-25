@@ -1,11 +1,11 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
-import { Student } from "src/entities/student.entity";
-import { Teacher } from "src/entities/teacher.entity";
+import { Student } from "../../entities/student.entity";
+import { Teacher } from "../../entities/teacher.entity";
 import { TeacherController } from "./teacher.controller";
 import { TeacherService } from "./teacher.service";
-import { SeedService } from "src/seed/seed.service";
+import { SeedService } from "../../seed/seed.service";
 
 @Module({
     imports: [

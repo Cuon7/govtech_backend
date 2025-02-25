@@ -9,7 +9,7 @@ export class Teacher {
   @Column({ unique: true })
   email: string;
  
-  @ManyToMany(() => Student, student => student.teachers, { cascade: true })
+  @ManyToMany(() => Student, student => student.teachers)
   @JoinTable({
     name: 'teacher_student',
     joinColumn: { name: 'teacherId', referencedColumnName: 'id' },

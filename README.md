@@ -8,11 +8,13 @@ Education sytem is a backend service designed to help teachers perform administr
 - [Table Of Content](#table-of-content)
 - [Tech stacks](#tech-stacks)
 - [Source structure](#source-structure)
+- [Test coverage](#test-coverage)
 - [How to run](#how-to-run)
   - [Pre-requisites](#pre-requisites)
   - [Installation](#installation)
   - [Environment setup](#environment-setup)
   - [Seeding](#seeding)
+  - [Postman Collection for testing](#postman)
 - [Development](#development)
 - [Contact](#contact)
 
@@ -37,24 +39,33 @@ Education sytem is a backend service designed to help teachers perform administr
 │   ├── main.ts
 │   ├── entities/
 │   │     ├── student.entity.ts
-│   │     └── register.dto.ts
-│   │     └── suspend.dto.ts
+│   │     └── teacher.entity.ts
+
 │   ├── dtos/
 │   │     ├── notification.dto.ts
-│   │     └── teacher.entity.ts
+│   │     └── register.dto.ts
+│   │     └── suspend.dto.ts
 │   ├── modules/
 │   │     └── teacher/
 │   │           ├── teacher.controller.ts
 │   │           ├── teacher.module.ts
 │   │           ├── teacher.service.ts
+│   │     └── test/
 │   │           ├── teacher.controller.spec.ts
+│   │           ├── teacher.module.spec.ts
+│   │           ├── teacher.service.spec.ts
 │   ├── seed/
+│   │     └── test/
+│   │           ├── seed.service.spec.ts
 │   │     └── seed.service.ts
 ├── .env
 ├── package.json
-├── yarn.lock
-└── README.md
+├── app.modules.ts
+└── main.ts
 ```
+
+## Test coverage
+![test-coverage](images/test-coverage.png)
 
 ## How to run
 ### Pre-requisites
@@ -92,6 +103,10 @@ DB_NAME=YOUR_DB_NAME
 ### Seeding
 
 After the server is successfully up and running, if there is no data in the table, the app will automatically seed data.
+
+### Postman
+
+- Attach the postman file: [Postman File](./Edu Sys APIs.postman_collection.json)
 
 ## Development
 ### Start application

@@ -1,6 +1,4 @@
 import { Module, OnModuleInit } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import {ConfigModule} from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Student } from './entities/student.entity';
@@ -24,8 +22,8 @@ dotenv.config(); // Load env
     }),
     TeacherModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule implements OnModuleInit {
   constructor(private readonly seedService: SeedService) {}
