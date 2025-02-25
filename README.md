@@ -106,7 +106,7 @@ After the server is successfully up and running, if there is no data in the tabl
 
 ### Postman
 
-- Attach the postman file: [Postman File](./Edu Sys APIs.postman_collection.json)
+- Attach the postman file: [Postman File](/Edu%20Sys%20APIs.postman_collection.json)
 
 ## Development
 ### Start application
