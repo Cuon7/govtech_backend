@@ -1,4 +1,4 @@
-# Education Connection Backend
+# Education System Backend
 
 ## Overview
 Education sytem is a backend service designed to help teachers perform administrative functions for their students. It's built using the NestJS framework, offering robust API endpoints for clients.
