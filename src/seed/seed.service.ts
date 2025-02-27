@@ -14,6 +14,22 @@ export class SeedService {
     ) { }
 
     async seed() {
+        // Check if the database exists; if not, create it.
+        const queryRunner = this.dataSource.createQueryRunner();
+        await queryRunner.connect();
+        const dbName = process.env.DB_NAME;
+        const dbExists = await queryRunner.query(
+            `SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '${dbName}'`
+        );
+        if (dbExists.length === 0) {
+            await queryRunner.query(`CREATE DATABASE ${dbName}`);
+            console.log(`Database ${dbName} created.`);
+        }
+        else {
+            console.log('Database exists.')
+        }
+        await queryRunner.release();
+
         const teachers = await this.teacherRepository.find();
         if (teachers.length === 0) {
             const teacher = await this.teacherRepository.create({
